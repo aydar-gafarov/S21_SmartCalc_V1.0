@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/res">
+        <file>png_for_credit_calc.jpeg</file>
+        <file>4.png</file>
+    </qresource>
+</RCC>

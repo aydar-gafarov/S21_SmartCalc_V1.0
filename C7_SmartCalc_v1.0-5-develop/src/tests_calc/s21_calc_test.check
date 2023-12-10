@@ -1,0 +1,93 @@
+#include "../s21_calc.h"
+
+#include <check.h>
+
+#test calculator_1
+const char str[256] = "23+3";
+double s21_res = s21_calculator(str);
+double res = 26;
+ck_assert_double_eq(res, s21_res);
+
+#test calculator_2
+const char str[256] = "23(2-2)";
+double s21_res = s21_calculator(str);
+double res = 0;
+ck_assert_double_eq(res, s21_res);
+
+#test calculator_3
+const char str[256] = "3*3/9";
+double s21_res = s21_calculator(str);
+double res = 1;
+ck_assert_double_eq(res, s21_res);
+
+#test calculator_4
+const char str[256] = "(40-20)*2";
+double s21_res = s21_calculator(str);
+double res = 40;
+ck_assert_double_eq(res, s21_res);
+
+#test calculator_5
+const char str[256] = "2^3-4";
+double s21_res = s21_calculator(str);
+double res = 4;
+ck_assert_double_eq(res, s21_res);
+
+#test calculator_6
+const char str[256] = "10%5";
+double s21_res = s21_calculator(str);
+double res = 0;
+ck_assert_double_eq(res, s21_res);
+
+#test calculator_7
+const char str[256] = "sin(90)";
+double s21_res = s21_calculator(str);
+double res = sinl(90);
+ck_assert_double_eq(res, s21_res);
+
+#test calculator_8
+const char str[256] = "cos(60)";
+double s21_res = s21_calculator(str);
+double res = cosl(60);
+ck_assert_double_eq(res, s21_res);
+
+#test calculator_9
+const char str[256] = "tan(45)";
+double s21_res = s21_calculator(str);
+double res = tanl(45);
+ck_assert_double_eq(res, s21_res);
+
+#test calculator_10
+const char str[256] = "asin(1)";
+double s21_res = s21_calculator(str);
+double res = asinl(1);
+ck_assert_double_eq(res, s21_res);
+
+#test calculator_11
+const char str[256] = "acos(1)";
+double s21_res = s21_calculator(str);
+double res = acosl(1);
+ck_assert_double_eq(res, s21_res);
+
+#test calculator_12
+const char str[256] = "atan(10)";
+double s21_res = s21_calculator(str);
+double res = atanl(10);
+ck_assert_double_eq(res, s21_res);
+
+#test calculator_13
+const char str[256] = "sqrt(20)";
+double s21_res = s21_calculator(str);
+double res = sqrtl(20);
+ck_assert_double_eq(res, s21_res);
+
+#test calculator_14
+const char str[256] = "log(10)";
+double s21_res = s21_calculator(str);
+double res = log10l(10);
+ck_assert_double_eq(res, s21_res);
+
+#test calculator_15
+const char str[256] = "ln(1)";
+double s21_res = s21_calculator(str);
+double res = 0;
+ck_assert_double_eq(res, s21_res);
